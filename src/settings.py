@@ -48,7 +48,7 @@ DOWNLOAD_ORIGINAL_URL: Optional[
 ] = "https://zenodo.org/api/records/4601472/files-archive"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
-CLASS2COLOR: Optional[Dict[str, List[str]]] = {"vineyard rows": [230, 25, 75]}
+CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
