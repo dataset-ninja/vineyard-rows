@@ -99,7 +99,7 @@ def convert_and_upload_supervisely_project(
 
         return sly.Annotation(img_size=(img_height, img_wight), labels=labels)
 
-    obj_class = sly.ObjClass("vineyard rows", sly.Bitmap)
+    obj_class = sly.ObjClass("vineyard rows", sly.Bitmap, color=(230, 25, 75))
 
     project = api.project.create(workspace_id, project_name, change_name_if_conflict=True)
     meta = sly.ProjectMeta(obj_classes=[obj_class])
