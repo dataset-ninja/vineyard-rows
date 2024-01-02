@@ -1,5 +1,4 @@
+## Motivation and dataset creation
 
-Sample image template:
-<img src="https://github.com/dataset-ninja/gland-segmentation/assets/78355358/f158d0dd-71d5-41a2-aba5-4a5f57d54c35" alt="image" width="800">
-
-<span style="font-size: smaller; font-style: italic;">Image description.</span>
+Precision agriculture is a fast-growing field that aims at introducing affordable and effective automation into agricultural processes. Nowadays, algorithmic solutions for navigation in vineyards require expensive sensors and high computational workloads that preclude large-scale applicability of autonomous robotic platforms in real business case scenarios. In their work, the authors presented a new inexpensive and affordable edge motion control system for autonomous navigation in rows of vineyards. It uses the properties of semantic segmentation provide a proportional controller that controls the robot area along the entire row without touching the vine plants. The result of the work was the creation of a **Semantic Segmentation Vineyard Rows** dataset.
+In order to create a dataset for training and testing the deep neural network, the authors carry out field surveys in two distinct agricultural areas in the North of Italy. The data is collected at different times of the day, with diverse weather conditions, and they present a variety of terrain types and wine qualities. To have different perspectives inside the vineyard rows, we acquire several videos with only three fixed orientations: one pointing the camera at the center of the vineyard row and the other two pointing to the left and right sides, respectively.
