@@ -53,9 +53,11 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = {"vineyard rows": [230, 25, 75]}
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = "https://arxiv.org/abs/2107.00700"
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = "https://arxiv.org/pdf/2107.00700.pdf"
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
+REPOSITORY: Optional[
+    Union[str, List[str], Dict[str, str]]
+] = "https://github.com/MrD1360/deep_segmentation_vineyards_navigation/tree/main"
 
 CITATION_URL: Optional[str] = None
 AUTHORS: Optional[List[str]] = [
