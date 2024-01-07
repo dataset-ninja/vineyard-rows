@@ -6,7 +6,7 @@ The **Semantic Segmentation Vineyard Rows** dataset is the result of work in whi
 
 The authors research group aims at developing an affordable self-driving system for vineyard parcels. Given a global path made of georeferenced waypoints, they exploit a dual local planner to overcome the lack of accuracy of the GPSbased localization filter inside the vine rows. Eventually, all the algorithms have been developed ROScompatible, in order to make easier the communication among them and to be easily deployed on developing platform; the Jackal Unmanned Ground Vehicle (UGV) by Clearpath Robotics3, that is fully supported by the Robot Operating System(ROS).
 
-<img src="https://github.com/dataset-ninja/vineyard-rows/assets/120389559/726fde89-f432-477a-9c34-14a9f58cd946" alt="image" width="600">
+<img src="https://github.com/dataset-ninja/vineyard-rows/assets/120389559/726fde89-f432-477a-9c34-14a9f58cd946" alt="image" width="600" height="600">
 
 <span style="font-size: smaller; font-style: italic;">The Jackal Unmanned Ground Vehicle in Grugliasco, Turin, North of Italy.</span>
 
