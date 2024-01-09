@@ -18,4 +18,4 @@ In order to create a dataset for training and testing the deep neural network, t
 
 <img src="https://github.com/dataset-ninja/vineyard-rows/assets/120389559/5e2ffa99-ae12-4533-b097-33053f570176" alt="image" width="800">
 
-<span style="font-size: smaller; font-style: italic;">In (a),(b) and (c) are shown three instances of the dataset, one for each video orientation. (a) is an example left samples, (b) center, and (c) right. (d),(e) and (f) are the corresponding binary masks for the supervised training. Dataset samples have been collected with different weather conditions and at different times of the day.</span>
+<span style="font-size: smaller; font-style: italic;">In a, b and c are shown three instances of the dataset, one for each video orientation. a is an example left samples, b center, and c right. d, e and f are the corresponding binary masks for the supervised training. Dataset samples have been collected with different weather conditions and at different times of the day.</span>
