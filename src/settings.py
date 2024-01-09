@@ -21,7 +21,10 @@ HIDE_DATASET = True  # set False when 100% sure about repo quality
 # * After uploading to instance ##
 ##################################
 LICENSE: License = License.CC_BY_4_0()
-APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Agricultural()]
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [
+    Industry.Agricultural(),
+    Industry.Robotics(),
+]
 CATEGORY: Category = Category.Agriculture()
 
 CV_TASKS: List[CVTask] = [CVTask.SemanticSegmentation()]
@@ -34,7 +37,7 @@ if RELEASE_DATE is None:
 HOMEPAGE_URL: str = "https://zenodo.org/records/4601472#.YcBSrHXMJNg"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = 11914905
+PREVIEW_IMAGE_ID: int = 12504674
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = "https://github.com/dataset-ninja/vineyard-rows"
@@ -73,9 +76,7 @@ AUTHORS_CONTACTS: Optional[List[str]] = [
     "marcello.chiaberge@polito.it",
 ]
 
-ORGANIZATION_NAME: Optional[
-    Union[str, List[str]]
-] = "Department of Electronics and Telecommunications, Politecnico di Torino, Turin, Italy"
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "Politecnico di Torino, Italy"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://www.det.polito.it/"]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}

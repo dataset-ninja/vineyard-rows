@@ -2,6 +2,7 @@ import os
 import shutil
 from urllib.parse import unquote, urlparse
 
+import numpy as np
 import supervisely as sly
 from dataset_tools.convert import unpack_if_archive
 from supervisely.io.fs import get_file_name, get_file_size
@@ -81,6 +82,24 @@ def convert_and_upload_supervisely_project(
     images_ext = ".jpg"
     masks_ext = "_refined_mask.jpg"
 
+    def fix_masks(image_np: np.ndarray) -> np.ndarray:
+        lower_bound = np.array([182, 182, 182])
+        upper_bound = np.array([255, 255, 255])
+        condition_white = np.logical_and(
+            np.all(image_np >= lower_bound, axis=2), np.all(image_np <= upper_bound, axis=2)
+        )
+
+        lower_bound = np.array([0, 0, 0])
+        upper_bound = np.array([64, 64, 64])
+        condition_black = np.logical_and(
+            np.all(image_np >= lower_bound, axis=2), np.all(image_np <= upper_bound, axis=2)
+        )
+
+        image_np[np.where(condition_white)] = (255, 255, 255)
+        image_np[np.where(condition_black)] = (0, 0, 0)
+
+        return image_np
+
     def create_ann(image_path):
         labels = []
 
@@ -89,7 +108,8 @@ def convert_and_upload_supervisely_project(
         img_wight = 2704  # image_np.shape[1]
 
         mask_path = image_path.replace(images_ext, masks_ext)
-        mask_np = sly.imaging.image.read(mask_path)[:, :, 0]
+        mask_np = sly.imaging.image.read(mask_path)[:, :, :]
+        mask_np = fix_masks(mask_np)[:, :, 0]
         mask = mask_np != 0
         bitmap = sly.Bitmap(data=mask).resize(
             in_size=(mask_np.shape[0], mask_np.shape[1]), out_size=(img_height, img_wight)
