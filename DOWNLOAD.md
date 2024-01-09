@@ -1,6 +1,6 @@
 Dataset **Vineyard Rows** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](Set 'HIDE_DATASET=False' to generate download link)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/s/m/su/5hPH3Mwty8WP5p4QI82tlWpKGEACk7LEeBtqrHcxZkwlqsNXSGzFjBcPgf6F55f0befBdlJDvfYTSA9EVPYJruhLlitsJQhGEgy24VAnzm9yrf0Gvmc53iTv2MK6.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
